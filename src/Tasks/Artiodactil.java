@@ -3,16 +3,27 @@ package Tasks;
 import java.util.Objects;
 
 public class Artiodactil extends Mamifer {
+    private int nrCoarne;
     int numarDegete;
+
+    public int getNrCoarne() {
+        return nrCoarne;
+    }
+
+    public void setNrCoarne(int nrCoarne) {
+        this.nrCoarne = nrCoarne;
+    }
 
     public Artiodactil() {
         super();
         this.numarDegete = 0;
+        this.nrCoarne = 0;
     }
 
-    public Artiodactil(String nume, int varsta, String tipNutritie, int numarDegete) {
-        super(nume, varsta, tipNutritie);
+    public Artiodactil(String nume, int varsta, String tipNutritie, int numarDegete, String culoare, int nrCoarne) {
+        super(nume, varsta, tipNutritie, culoare);
         this.numarDegete = numarDegete;
+        this.nrCoarne = nrCoarne;
     }
 
     @Override
@@ -34,6 +45,7 @@ public class Artiodactil extends Mamifer {
         return "Artiodactil: " + this.getNume() +
                 ", varsta: " + this.varsta +
                 ", tip nutritie: " + this.getTipNutritie() +
-                ", numar degete: " + this.numarDegete;
+                ", numar degete: " + this.numarDegete +
+                ", numar coarne: " + this.nrCoarne ;
     }
 }

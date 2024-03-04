@@ -4,15 +4,18 @@ import java.util.Objects;
 
 class Pasare extends Animal {
     String culoare;
+    private double lungimeAripi;
 
     public Pasare() {
         super();
-        this.culoare = "Necunoscuta";
+        this.lungimeAripi = 0d;
+        this.culoare = "Necunosvut";
     }
 
-    public Pasare(String nume, int varsta, String culoare) {
+    public Pasare(String nume, int varsta, String culoare, double lungimeAripi) {
         super(nume, varsta);
         this.culoare = culoare;
+        this.lungimeAripi = lungimeAripi;
     }
 
     @Override
@@ -33,6 +36,7 @@ class Pasare extends Animal {
     public String toString() {
         return "Pasare: " + this.getNume() +
                 ", varsta: " + this.varsta +
-                ", culoare: " + this.culoare;
+                ", culoare: " + this.culoare +
+                ", lungime aripi: " + this.lungimeAripi;
     }
 }

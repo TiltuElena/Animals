@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Mamifer extends Animal {
     private String tipNutritie;
+    String culoare;
 
     public String getTipNutritie() {
         return tipNutritie;
@@ -16,11 +17,13 @@ public class Mamifer extends Animal {
     public Mamifer() {
         super();
         this.tipNutritie = "Necunoscut";
+        this.culoare = "black";
     }
 
-    public Mamifer(String nume, int varsta, String tipNutritie) {
+    public Mamifer(String nume, int varsta, String tipNutritie, String culoare) {
         super(nume, varsta);
         this.tipNutritie = tipNutritie;
+        this.culoare = culoare;
     }
 
     @Override
@@ -41,6 +44,7 @@ public class Mamifer extends Animal {
     public String toString() {
         return "Mamifer: " + this.getNume() +
                 ", varsta: " + this.varsta +
-                ", tip nutritie: " + this.tipNutritie;
+                ", tip nutritie: " + this.tipNutritie +
+                ", culoare: " + this.culoare;
     }
 }

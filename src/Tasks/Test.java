@@ -8,10 +8,10 @@ public class Test {
     public static void main(String[] args) {
         Animal animal = new Animal();
         List<Animal> listaAnimale = new ArrayList<>();
-        listaAnimale.add(new Mamifer("Caine", 5, "Omnivor"));
-        listaAnimale.add(new Artiodactil("Capra", 4, "Ierbivor", 2));
-        listaAnimale.add(new Pasare("Porumbel", 2, "Gri"));
-        listaAnimale.add(new Mamifer("Urs", 7, "Omnivor"));
+        listaAnimale.add(new Mamifer("Caine", 5, "Omnivor", "Brown"));
+        listaAnimale.add(new Artiodactil("Capra", 4, "Ierbivor", 2, "Brown", 2));
+        listaAnimale.add(new Pasare("Porumbel", 2, "Gri", 10d));
+        listaAnimale.add(new Mamifer("Urs", 7, "Omnivor", "White"));
 
         for (Animal animalLista : listaAnimale) {
             animalLista.Mananca("Mancare");
@@ -30,7 +30,7 @@ public class Test {
         animal.filtreazaVarsta(listaAnimale, varstaMinima, varstaMaxima);
 
         System.out.println("\nComparare obiect nou cu lista de animale:");
-        Animal animalNou = new Mamifer("Caine", 5, "Omnivor");
+        Animal animalNou = new Mamifer("Caine", 5, "Omnivor", "Brown");
         for (Animal animalLista : listaAnimale) {
             if (animalLista.equals(animalNou)) {
                 System.out.println("Coincide: " + animalLista + " cu " + animalNou.getNume());
